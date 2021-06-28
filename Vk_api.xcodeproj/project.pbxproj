@@ -13,6 +13,7 @@
 		A70C546D2689D17900457312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70C546B2689D17900457312 /* Main.storyboard */; };
 		A70C546F2689D17B00457312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70C546E2689D17B00457312 /* Assets.xcassets */; };
 		A70C54722689D17B00457312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70C54702689D17B00457312 /* LaunchScreen.storyboard */; };
+		A70C547D2689D3B800457312 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C547C2689D3B700457312 /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A70C546E2689D17B00457312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A70C54712689D17B00457312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A70C54732689D17B00457312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A70C547C2689D3B700457312 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		A70C54642689D17900457312 /* Vk_api */ = {
 			isa = PBXGroup;
 			children = (
-				A70C54652689D17900457312 /* AppDelegate.swift */,
-				A70C54672689D17900457312 /* SceneDelegate.swift */,
+				A70C547B2689D3A900457312 /* Singleton */,
+				A70C54792689D2F000457312 /* Resources */,
+				A70C547A2689D31100457312 /* App */,
 				A70C54692689D17900457312 /* ViewController.swift */,
+			);
+			path = Vk_api;
+			sourceTree = "<group>";
+		};
+		A70C54792689D2F000457312 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				A70C546B2689D17900457312 /* Main.storyboard */,
 				A70C546E2689D17B00457312 /* Assets.xcassets */,
 				A70C54702689D17B00457312 /* LaunchScreen.storyboard */,
 				A70C54732689D17B00457312 /* Info.plist */,
 			);
-			path = Vk_api;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A70C547A2689D31100457312 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A70C54652689D17900457312 /* AppDelegate.swift */,
+				A70C54672689D17900457312 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A70C547B2689D3A900457312 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				A70C547C2689D3B700457312 /* Session.swift */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70C547D2689D3B800457312 /* Session.swift in Sources */,
 				A70C546A2689D17900457312 /* ViewController.swift in Sources */,
 				A70C54662689D17900457312 /* AppDelegate.swift in Sources */,
 				A70C54682689D17900457312 /* SceneDelegate.swift in Sources */,
@@ -288,7 +316,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 233CLBU936;
-				INFOPLIST_FILE = Vk_api/Info.plist;
+				INFOPLIST_FILE = Vk_api/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +335,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 233CLBU936;
-				INFOPLIST_FILE = Vk_api/Info.plist;
+				INFOPLIST_FILE = Vk_api/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
