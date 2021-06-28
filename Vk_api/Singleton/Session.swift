@@ -6,7 +6,6 @@
 //
 
 import Foundation
-///TODO: - как лучше назвать папку где будет храниться Session?
 final class Session{
     static let share = Session()
     private init(){

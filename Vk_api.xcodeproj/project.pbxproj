@@ -58,7 +58,7 @@
 		A70C54642689D17900457312 /* Vk_api */ = {
 			isa = PBXGroup;
 			children = (
-				A70C547B2689D3A900457312 /* Value */,
+				A70C547B2689D3A900457312 /* Singleton */,
 				A70C54792689D2F000457312 /* Resources */,
 				A70C547A2689D31100457312 /* App */,
 				A70C54692689D17900457312 /* ViewController.swift */,
@@ -86,12 +86,12 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		A70C547B2689D3A900457312 /* Value */ = {
+		A70C547B2689D3A900457312 /* Singleton */ = {
 			isa = PBXGroup;
 			children = (
 				A70C547C2689D3B700457312 /* Session.swift */,
 			);
-			path = Value;
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
