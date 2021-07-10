@@ -35,7 +35,12 @@ extension AuthViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         do{
             try vm.saveTokenAndUserId(navigationResponse.response.url)
-            //TODO: - тут переход на другую view
+            guard let presentVC = storyboard?.instantiateViewController(identifier: "FriendsViewController") as? FriendsViewController else{
+                print("Vc with identifier FriendsViewController, not found")
+                return
+            }
+            presentVC.vm = FriendsViewModelImpl()
+            view.window?.rootViewController = presentVC
             decisionHandler(.cancel)
         }catch{
             decisionHandler(.allow)

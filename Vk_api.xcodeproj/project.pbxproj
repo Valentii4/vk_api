@@ -14,10 +14,15 @@
 		A70C546F2689D17B00457312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70C546E2689D17B00457312 /* Assets.xcassets */; };
 		A70C54722689D17B00457312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70C54702689D17B00457312 /* LaunchScreen.storyboard */; };
 		A70C547D2689D3B800457312 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C547C2689D3B700457312 /* Session.swift */; };
+		A70FFDD72699CCB4005D06C3 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70FFDD62699CCB4005D06C3 /* FriendsViewModel.swift */; };
 		A73AEAF62694A44E002CCCB6 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73AEAF52694A44E002CCCB6 /* AuthViewModel.swift */; };
 		A75098952698AC5800F1EA63 /* DefaultErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75098942698AC5800F1EA63 /* DefaultErrors.swift */; };
 		A75098982698AE2200F1EA63 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75098972698AE2200F1EA63 /* FriendsViewController.swift */; };
 		A750989D2698AE6C00F1EA63 /* FriendsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A750989C2698AE6C00F1EA63 /* FriendsApiService.swift */; };
+		A75098A12698B20200F1EA63 /* DefaultUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75098A02698B20200F1EA63 /* DefaultUrl.swift */; };
+		A75098A42698B4A300F1EA63 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75098A32698B4A300F1EA63 /* Request.swift */; };
+		A75098A72698B51A00F1EA63 /* FriendsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75098A62698B51A00F1EA63 /* FriendsRequest.swift */; };
+		A75098AA2698B70400F1EA63 /* Data+PrettyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75098A92698B70400F1EA63 /* Data+PrettyJSON.swift */; };
 		DA0A75131BF2AA2DA0DCA758 /* Pods_Vk_api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFCFFA892C33EEEBD4A3249 /* Pods_Vk_api.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,10 +37,15 @@
 		A70C54712689D17B00457312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A70C54732689D17B00457312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A70C547C2689D3B700457312 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		A70FFDD62699CCB4005D06C3 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
 		A73AEAF52694A44E002CCCB6 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		A75098942698AC5800F1EA63 /* DefaultErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultErrors.swift; sourceTree = "<group>"; };
 		A75098972698AE2200F1EA63 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		A750989C2698AE6C00F1EA63 /* FriendsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsApiService.swift; sourceTree = "<group>"; };
+		A75098A02698B20200F1EA63 /* DefaultUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUrl.swift; sourceTree = "<group>"; };
+		A75098A32698B4A300F1EA63 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		A75098A62698B51A00F1EA63 /* FriendsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRequest.swift; sourceTree = "<group>"; };
+		A75098A92698B70400F1EA63 /* Data+PrettyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+PrettyJSON.swift"; sourceTree = "<group>"; };
 		CDFCFFA892C33EEEBD4A3249 /* Pods_Vk_api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vk_api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E588A6AE8CF43FD269CFA9A4 /* Pods-Vk_api.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vk_api.release.xcconfig"; path = "Target Support Files/Pods-Vk_api/Pods-Vk_api.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +100,8 @@
 		A70C54642689D17900457312 /* Vk_api */ = {
 			isa = PBXGroup;
 			children = (
+				A75098A82698B6ED00F1EA63 /* Extension */,
+				A750989E2698B1EB00F1EA63 /* Networking */,
 				A75098932698AC4A00F1EA63 /* Value */,
 				A73AEAF12694A3B3002CCCB6 /* Modules */,
 				A70C54792689D2F000457312 /* Resources */,
@@ -190,6 +202,7 @@
 		A750989A2698AE4900F1EA63 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A70FFDD62699CCB4005D06C3 /* FriendsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,8 +211,34 @@
 			isa = PBXGroup;
 			children = (
 				A750989C2698AE6C00F1EA63 /* FriendsApiService.swift */,
+				A75098A62698B51A00F1EA63 /* FriendsRequest.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		A750989E2698B1EB00F1EA63 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A75098A22698B32200F1EA63 /* Value */,
+				A75098A32698B4A300F1EA63 /* Request.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A75098A22698B32200F1EA63 /* Value */ = {
+			isa = PBXGroup;
+			children = (
+				A75098A02698B20200F1EA63 /* DefaultUrl.swift */,
+			);
+			path = Value;
+			sourceTree = "<group>";
+		};
+		A75098A82698B6ED00F1EA63 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A75098A92698B70400F1EA63 /* Data+PrettyJSON.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,11 +357,16 @@
 			files = (
 				A750989D2698AE6C00F1EA63 /* FriendsApiService.swift in Sources */,
 				A73AEAF62694A44E002CCCB6 /* AuthViewModel.swift in Sources */,
+				A75098A72698B51A00F1EA63 /* FriendsRequest.swift in Sources */,
+				A75098AA2698B70400F1EA63 /* Data+PrettyJSON.swift in Sources */,
 				A70C547D2689D3B800457312 /* Session.swift in Sources */,
 				A70C546A2689D17900457312 /* ViewController.swift in Sources */,
 				A70C54662689D17900457312 /* AppDelegate.swift in Sources */,
+				A75098A12698B20200F1EA63 /* DefaultUrl.swift in Sources */,
 				A75098982698AE2200F1EA63 /* FriendsViewController.swift in Sources */,
+				A75098A42698B4A300F1EA63 /* Request.swift in Sources */,
 				A75098952698AC5800F1EA63 /* DefaultErrors.swift in Sources */,
+				A70FFDD72699CCB4005D06C3 /* FriendsViewModel.swift in Sources */,
 				A70C54682689D17900457312 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,6 @@
 import Foundation
 protocol AuthViewModel {
     var urlRequest: URLRequest? { get }
-    var redirectPath: String { get }
     func saveTokenAndUserId(_ fromURL: URL?) throws
 }
 
@@ -17,7 +16,7 @@ class AuthViewModelImpl: AuthViewModel {
     private var responseType: String = "token"
     private var hostUrlComponents: URLComponents? = URLComponents(string:"https://oauth.vk.com")
     
-    var redirectPath: String {
+    private var redirectPath: String {
         return "/blank.html"
     }
     
@@ -56,6 +55,10 @@ class AuthViewModelImpl: AuthViewModel {
             Session.share.userId = userID
         }
     }
+    
+}
+//MARK: - Privete Methods
+extension AuthViewModelImpl{
     
     private func getParamsFromFragment(_ fragment: String) -> [String: String]{
         return  fragment

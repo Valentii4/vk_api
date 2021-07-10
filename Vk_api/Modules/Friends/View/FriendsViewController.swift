@@ -9,6 +9,7 @@ import UIKit
 
 class FriendsViewController: UIViewController {
 
+    var vm: FriendsViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
 
