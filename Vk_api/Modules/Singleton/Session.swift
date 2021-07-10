@@ -12,6 +12,6 @@ final class Session{
         
     }
     
-    var token: String?
-    var userId: Int?
+    var token: String = ""
+    var userId: String = ""
 }
