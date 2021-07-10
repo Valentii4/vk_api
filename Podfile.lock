@@ -1,16 +1,26 @@
 PODS:
   - Alamofire (5.2.2)
+  - DynamicJSON (2.0.2)
+  - Kingfisher (5.15.7):
+    - Kingfisher/Core (= 5.15.7)
+  - Kingfisher/Core (5.15.7)
 
 DEPENDENCIES:
   - Alamofire
+  - DynamicJSON
+  - Kingfisher
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - DynamicJSON
+    - Kingfisher
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  DynamicJSON: fc0c5a82980ff8aa956156f04d84fcdb2822e875
+  Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
 
-PODFILE CHECKSUM: 6976870b2ea15d943409d1872588f2ee5d566349
+PODFILE CHECKSUM: 49a8d34052ac6d52ca814f5e5d41b841ccee3f1a
 
 COCOAPODS: 1.8.4

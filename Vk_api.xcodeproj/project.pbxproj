@@ -23,6 +23,11 @@
 		A75098A42698B4A300F1EA63 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75098A32698B4A300F1EA63 /* Request.swift */; };
 		A75098A72698B51A00F1EA63 /* FriendsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75098A62698B51A00F1EA63 /* FriendsRequest.swift */; };
 		A75098AA2698B70400F1EA63 /* Data+PrettyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75098A92698B70400F1EA63 /* Data+PrettyJSON.swift */; };
+		A761D81D2699E923000D3FED /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761D81C2699E923000D3FED /* Response.swift */; };
+		A761D8202699E975000D3FED /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761D81F2699E975000D3FED /* UserModel.swift */; };
+		A761D8232699EF75000D3FED /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761D8212699EF75000D3FED /* FriendTableViewCell.swift */; };
+		A761D8242699EF75000D3FED /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A761D8222699EF75000D3FED /* FriendTableViewCell.xib */; };
+		A761D8272699F0C6000D3FED /* FriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761D8262699F0C6000D3FED /* FriendViewModel.swift */; };
 		DA0A75131BF2AA2DA0DCA758 /* Pods_Vk_api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFCFFA892C33EEEBD4A3249 /* Pods_Vk_api.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +51,11 @@
 		A75098A32698B4A300F1EA63 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		A75098A62698B51A00F1EA63 /* FriendsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsRequest.swift; sourceTree = "<group>"; };
 		A75098A92698B70400F1EA63 /* Data+PrettyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+PrettyJSON.swift"; sourceTree = "<group>"; };
+		A761D81C2699E923000D3FED /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		A761D81F2699E975000D3FED /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A761D8212699EF75000D3FED /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		A761D8222699EF75000D3FED /* FriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
+		A761D8262699F0C6000D3FED /* FriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModel.swift; sourceTree = "<group>"; };
 		CDFCFFA892C33EEEBD4A3249 /* Pods_Vk_api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vk_api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E588A6AE8CF43FD269CFA9A4 /* Pods-Vk_api.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vk_api.release.xcconfig"; path = "Target Support Files/Pods-Vk_api/Pods-Vk_api.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +194,7 @@
 		A75098962698ADE700F1EA63 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				A761D81A2699E8F8000D3FED /* Model */,
 				A750989B2698AE4E00F1EA63 /* Networking */,
 				A750989A2698AE4900F1EA63 /* ViewModel */,
 				A75098992698AE2C00F1EA63 /* View */,
@@ -195,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				A75098972698AE2200F1EA63 /* FriendsViewController.swift */,
+				A761D8212699EF75000D3FED /* FriendTableViewCell.swift */,
+				A761D8222699EF75000D3FED /* FriendTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				A70FFDD62699CCB4005D06C3 /* FriendsViewModel.swift */,
+				A761D8262699F0C6000D3FED /* FriendViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -219,6 +233,7 @@
 		A750989E2698B1EB00F1EA63 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				A761D81B2699E905000D3FED /* Models */,
 				A75098A22698B32200F1EA63 /* Value */,
 				A75098A32698B4A300F1EA63 /* Request.swift */,
 			);
@@ -239,6 +254,22 @@
 				A75098A92698B70400F1EA63 /* Data+PrettyJSON.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		A761D81A2699E8F8000D3FED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A761D81F2699E975000D3FED /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A761D81B2699E905000D3FED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A761D81C2699E923000D3FED /* Response.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +334,7 @@
 				A70C54722689D17B00457312 /* LaunchScreen.storyboard in Resources */,
 				A70C546F2689D17B00457312 /* Assets.xcassets in Resources */,
 				A70C546D2689D17900457312 /* Main.storyboard in Resources */,
+				A761D8242699EF75000D3FED /* FriendTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,13 +393,17 @@
 				A75098AA2698B70400F1EA63 /* Data+PrettyJSON.swift in Sources */,
 				A70C547D2689D3B800457312 /* Session.swift in Sources */,
 				A70C546A2689D17900457312 /* ViewController.swift in Sources */,
+				A761D81D2699E923000D3FED /* Response.swift in Sources */,
 				A70C54662689D17900457312 /* AppDelegate.swift in Sources */,
+				A761D8272699F0C6000D3FED /* FriendViewModel.swift in Sources */,
 				A75098A12698B20200F1EA63 /* DefaultUrl.swift in Sources */,
 				A75098982698AE2200F1EA63 /* FriendsViewController.swift in Sources */,
 				A75098A42698B4A300F1EA63 /* Request.swift in Sources */,
 				A75098952698AC5800F1EA63 /* DefaultErrors.swift in Sources */,
 				A70FFDD72699CCB4005D06C3 /* FriendsViewModel.swift in Sources */,
+				A761D8202699E975000D3FED /* UserModel.swift in Sources */,
 				A70C54682689D17900457312 /* SceneDelegate.swift in Sources */,
+				A761D8232699EF75000D3FED /* FriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
