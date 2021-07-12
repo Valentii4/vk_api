@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 protocol FriendViewModel{
-    var imageURL: URL { get }
+    var imageURL: URL? { get }
     var firstName: String { get }
     var secondName: String { get }
 }
@@ -21,8 +21,8 @@ class FriendViewModelImpl: FriendViewModel {
         self.user = user
     }
     
-    var imageURL: URL{
-        user.photoURL
+    var imageURL: URL?{
+        URL(string: user.photoString)
     }
     var firstName: String {
         user.firstName

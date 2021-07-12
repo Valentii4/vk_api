@@ -28,6 +28,8 @@
 		A761D8232699EF75000D3FED /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761D8212699EF75000D3FED /* FriendTableViewCell.swift */; };
 		A761D8242699EF75000D3FED /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A761D8222699EF75000D3FED /* FriendTableViewCell.xib */; };
 		A761D8272699F0C6000D3FED /* FriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761D8262699F0C6000D3FED /* FriendViewModel.swift */; };
+		A772A563269B32DD00DD9BB3 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772A562269B32DD00DD9BB3 /* RealmService.swift */; };
+		A772A565269B32F100DD9BB3 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772A564269B32F100DD9BB3 /* DatabaseService.swift */; };
 		DA0A75131BF2AA2DA0DCA758 /* Pods_Vk_api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFCFFA892C33EEEBD4A3249 /* Pods_Vk_api.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		A761D8212699EF75000D3FED /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		A761D8222699EF75000D3FED /* FriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
 		A761D8262699F0C6000D3FED /* FriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModel.swift; sourceTree = "<group>"; };
+		A772A562269B32DD00DD9BB3 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		A772A564269B32F100DD9BB3 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		CDFCFFA892C33EEEBD4A3249 /* Pods_Vk_api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vk_api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E588A6AE8CF43FD269CFA9A4 /* Pods-Vk_api.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vk_api.release.xcconfig"; path = "Target Support Files/Pods-Vk_api/Pods-Vk_api.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +114,7 @@
 		A70C54642689D17900457312 /* Vk_api */ = {
 			isa = PBXGroup;
 			children = (
+				A772A561269B32CA00DD9BB3 /* DB */,
 				A75098A82698B6ED00F1EA63 /* Extension */,
 				A750989E2698B1EB00F1EA63 /* Networking */,
 				A75098932698AC4A00F1EA63 /* Value */,
@@ -272,6 +277,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A772A561269B32CA00DD9BB3 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				A772A562269B32DD00DD9BB3 /* RealmService.swift */,
+				A772A564269B32F100DD9BB3 /* DatabaseService.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -392,6 +406,7 @@
 				A75098A72698B51A00F1EA63 /* FriendsRequest.swift in Sources */,
 				A75098AA2698B70400F1EA63 /* Data+PrettyJSON.swift in Sources */,
 				A70C547D2689D3B800457312 /* Session.swift in Sources */,
+				A772A565269B32F100DD9BB3 /* DatabaseService.swift in Sources */,
 				A70C546A2689D17900457312 /* ViewController.swift in Sources */,
 				A761D81D2699E923000D3FED /* Response.swift in Sources */,
 				A70C54662689D17900457312 /* AppDelegate.swift in Sources */,
@@ -400,6 +415,7 @@
 				A75098982698AE2200F1EA63 /* FriendsViewController.swift in Sources */,
 				A75098A42698B4A300F1EA63 /* Request.swift in Sources */,
 				A75098952698AC5800F1EA63 /* DefaultErrors.swift in Sources */,
+				A772A563269B32DD00DD9BB3 /* RealmService.swift in Sources */,
 				A70FFDD72699CCB4005D06C3 /* FriendsViewModel.swift in Sources */,
 				A761D8202699E975000D3FED /* UserModel.swift in Sources */,
 				A70C54682689D17900457312 /* SceneDelegate.swift in Sources */,

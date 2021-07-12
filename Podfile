@@ -7,4 +7,6 @@ target 'Vk_api' do
 	pod 'Alamofire'
 	pod 'DynamicJSON'
 	pod 'Kingfisher'
+	pod 'SwiftKeychainWrapper'
+	pod 'RealmSwift'
 end

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 protocol FriendsViewModel {
     var updateTableView: () -> () { get set }
     var numberOfRowInSection: Int { get }
@@ -15,14 +16,22 @@ protocol FriendsViewModel {
 }
 
 class FriendsViewModelImpl: FriendsViewModel {
-    private var users: [UserModel] = []
+    private var users: [UserModel] {
+        db.getUsers()
+    }
     private let api = FriendsApiServiceImpl()
+    private var db: DatabaseService
     
     var numberOfRowInSection: Int { users.count }
     var updateTableView: () -> () = {}
     
-    init() {
-        loadUsersFromApi()
+    init?() {
+        guard let db = RealmService() else{
+            print("Data Base not init")
+            return nil
+        }
+        self.db = db
+        self.loadUsersFromApi()
     }
     
     func getFriendViewModel(forCellWithIndexPath: IndexPath) -> FriendViewModel{
@@ -34,8 +43,12 @@ class FriendsViewModelImpl: FriendsViewModel {
         let token = Session.share.token
         api.getFriends(params: FriendsRequest(userId: userID, count: 50, token: token)) { [weak self] users, eror in
             guard let self = self else{ return }
-            self.users = users
-            self.updateTableView()
+            do{
+                try self.db.saveUsers(users: users)
+                self.updateTableView()
+            }catch{
+                print(error)
+            }
         }
     }
 }
