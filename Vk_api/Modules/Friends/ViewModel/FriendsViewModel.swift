@@ -17,7 +17,9 @@ protocol FriendsViewModel {
 
 class FriendsViewModelImpl: FriendsViewModel {
     private var users: [UserModel] {
-        db.getUsers()
+        db.getUsers { [weak self] in
+            self?.updateTableView()
+        }
     }
     private let api = FriendsApiServiceImpl()
     private var db: DatabaseService
@@ -45,7 +47,6 @@ class FriendsViewModelImpl: FriendsViewModel {
             guard let self = self else{ return }
             do{
                 try self.db.saveUsers(users: users)
-                self.updateTableView()
             }catch{
                 print(error)
             }

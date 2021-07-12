@@ -9,5 +9,5 @@ import Foundation
 protocol DatabaseService {
     func saveUser(user: UserModel) throws
     func saveUsers(users: [UserModel]) throws
-    func getUsers() -> [UserModel]
+    func getUsers(observe: @escaping () -> ()) -> [UserModel]
 }
